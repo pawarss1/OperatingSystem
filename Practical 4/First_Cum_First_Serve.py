@@ -10,7 +10,7 @@ wt = [0]*len(arr)
 def sort():
     for i in range(len(arr)):
         for j in range(len(arr) - i - 1):
-            if(arr[j] > arr[j+1]):
+            if(arr[j] > arr[j+1]):      #SORT ACCORDING TO THE ARRIVAL TIME
                 temp = arr[j]
                 arr[j] = arr[j+1]
                 arr[j+1] = temp
@@ -37,7 +37,7 @@ def fcfs():
             prev = prev + bt[i]
         else:
             if(arr[i] > prev):
-                while(arr[i] != prev):
+                while(arr[i] != prev):      #IF THE PROCESS HASNT ARRIVED YET
                     prev = prev + 1
             wt[i] = prev - arr[i]
             prev = prev + bt[i]
