@@ -45,18 +45,22 @@ def bankers(counter):
     while(counter != 0):
         safe = 0
         for i in range(process):
+            deadlockCtr = counter
             if(running[i]):
                 flag = 1
-                deadlockCtr = counter
+                
                 for j in range(resources):
                     if(need[i][j] > available[j]):
                         flag = 0
+                        
+                    if(not flag):
                         deadlockCtr -=1
                         if(deadlockCtr == 0):
                             breakWhileUnsafeState()
                             return -1
+                    else:
                         break
-                
+                    
                 if(flag):
                     print("Process", i, " is executing")
                     running[i] = 0
