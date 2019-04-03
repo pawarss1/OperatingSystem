@@ -1,3 +1,4 @@
+#Bankers algorithm..
 allocated = [[0, 1, 0],
         [2, 0, 0],
         [3, 0, 2],
@@ -14,10 +15,10 @@ maxNeed = [[7, 5, 3],
 
 process = 5
 resources = 3
-counter = process
-running = [1]*len(process) 
+
+running = [1]*process 
 available = [3, 3, 2]
-need = [0]*len(maxNeed)
+need = [[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]]
 safe = 0
 
 for i in range(process):
@@ -27,7 +28,7 @@ for i in range(process):
 
 
 
-def bankers():
+def bankers(counter):
     flag = 0
     while(counter != 0):
         safe = 0
@@ -54,5 +55,5 @@ def bankers():
     elif(not safe):
         print("The processes are not in safe state")
 
-
-bankers()
+counter = 5
+bankers(counter)
