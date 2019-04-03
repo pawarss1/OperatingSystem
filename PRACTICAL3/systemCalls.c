@@ -3,7 +3,7 @@
 #include<fcntl.h>
 
 int main(){
-	int f, a = 10, b = 20, c;
+	int f, a = 100, b = 50, c = 0;
 	printf("Parent process: %d\n", getppid());
 	printf("Child process: %d\n", getpid());
 	
