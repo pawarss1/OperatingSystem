@@ -1,1 +1,1 @@
-# AIM : To implement bankers algorithm algorithm.
+# AIM : To implement bankers algorithm.
