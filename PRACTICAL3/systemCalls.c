@@ -13,15 +13,15 @@ int main(){
 	wait();
 	
 	if(f > 0){
-		c = b - a;
-		printf("Difference = %d\n", c);
-		sleep(5);
+		c = b % a;
+		printf("Remainder = %d\n", c);
+		sleep(3);
 		printf("Parent and Child PID: %d, %d\n", getppid(), getpid());
 	}
 	
 	if(f == 0){
-		c = b / a;
-		printf("Quotient: %d\n", c);
+		c = b * a;
+		printf("Product: %d\n", c);
 		printf("Parent and Child PID: %d, %d\n", getppid(), getpid());
 	}
 	return 0;
