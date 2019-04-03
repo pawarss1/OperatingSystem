@@ -1,1 +1,1 @@
-# AIM : To implement memory management algorithms..
+# AIM : To implement bankers algorithm algorithm.
